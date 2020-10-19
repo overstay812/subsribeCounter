@@ -1,9 +1,11 @@
 
 
+
+
 let input = document.querySelector('.input')
 let watchingCounter = document.querySelector('.watchingCounter')
 let subscriberCounter = document.querySelector('.subscriberCounter')
-
+var ctx = document.getElementById('myChart').getContext('2d');
 
 let getResults = () => {
     let inputResult = input.value
@@ -12,21 +14,17 @@ let getResults = () => {
 }
 
 
-
-
-var ctx = document.getElementById('myChart').getContext('2d');
-
-
-
 getDiogramResult = () => {
+
+    Chart.defaults.global.legend.display = false;
     let inputResult = input.value
-    let arr = [0, 0, 0, 0, 0, 0, 0,0]
+    let arr = [0, 0, 0, 0, 0, 0, 0, 0]
     arr = arr.map((item, index) => {
         if (index <= 1) {
             return item == 0
         }
         else {
-           return item = item + inputResult / Math.floor(Math.random() * (100 - 47) + 47)
+            return item = item + inputResult / Math.floor(Math.random() * (100 - 47) + 47)
         }
     })
 
@@ -35,7 +33,7 @@ getDiogramResult = () => {
         data: {
             labels: ['', '1 день', '2 день', '3 день', '4 день', '5 день', '6 день', '7 день'],
             datasets: [{
-                label: 'false',
+                label: '',
                 data: arr,
 
                 backgroundColor: [
@@ -50,22 +48,23 @@ getDiogramResult = () => {
                     '#7045C4'
                 ],
                 borderWidth: 2,
-                
+
                 pointStyle: 'circle',
                 pointBackgroundColor: '#ffffff',
                 pointBorderColor: '#7045C4',
                 pointBorderWidth: 2,
-                pointRadius:7,	
+                pointRadius: 4,
                 cubicInterpolationMode: 'monotone',
-                
+
             }]
         },
         options: {
             scales: {
                 yAxes: [{
                     ticks: {
+                        color: 'red',
                         suggestedMin: 60,
-                 suggestedMax: 300,
+                        suggestedMax: 300,
                         beginAtZero: true
                     }
                 }]
@@ -73,7 +72,6 @@ getDiogramResult = () => {
         }
     });
 }
-
 
 
 getDiogramResult()

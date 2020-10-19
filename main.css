@@ -8,7 +8,7 @@ body {
   counter-reset: list;
   font-family: "Montserrat", "PT Sans", sans-serif;
   /* font-family: , sans-serif; */
-  padding: 0 40px;
+  margin: 0 40px;
 }
 
 .box {
@@ -161,7 +161,7 @@ body {
 #myChart {
   max-width: 701px;
   max-height: 209px;
-  width: 100%;
+  /* width: 100%; */
   margin: 37px 20px 37px 20px;
 }
 
@@ -472,14 +472,15 @@ body {
   }
   #myChart {
     max-width: 374px;
-    max-height: 158px;
+    min-height: 158px;
+    
     width: 100%;
     margin: 0;
     margin-bottom: 20px;
   }
   .diagram span {
     display: inline-block;
-    padding: 16px 0px 16px 0px;
+    padding: 16px 0px 0px 0px;
     font-family: PT Sans;
     font-style: normal;
     font-weight: normal;
