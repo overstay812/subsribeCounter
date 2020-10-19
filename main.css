@@ -7,8 +7,7 @@
 body {
   counter-reset: list;
   font-family: "Montserrat", "PT Sans", sans-serif;
-  /* font-family: , sans-serif; */
-  margin: 0 40px;
+  padding: 0 40px;
 }
 
 .box {
@@ -161,7 +160,7 @@ body {
 #myChart {
   max-width: 701px;
   max-height: 209px;
-  /* width: 100%; */
+
   margin: 37px 20px 37px 20px;
 }
 
@@ -275,7 +274,7 @@ body {
   }
 
   .input {
-    /* min-width: 200px; */
+
     width: 100%;
     max-width: 270px;
     font-size: 18px;
@@ -293,14 +292,8 @@ body {
   #myChart {
     max-width: 772px;
     max-height: 209px;
-    width: 100%;
     margin: 37px 50px 37px 60px;
   }
-
-  /* .diagram img {
-    width: 100%;
-    max-height: 283px;
-  } */
 
   .legend {
     margin-top: 30px;
@@ -333,7 +326,7 @@ body {
 
   .box {
     display: grid;
-    /* max-width: 1440px; */
+
     margin: 0 auto;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
@@ -355,7 +348,7 @@ body {
     font-size: 15px;
     line-height: 25px;
     color: #505361;
-    /* margin-bottom: 50px; */
+
     padding: 0px 20px;
   }
 
@@ -461,9 +454,7 @@ body {
   .diagram {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     grid-area: diagram;
-    max-width: 414px;
     max-height: auto;
     margin-top: 16px;
     border-radius: 0px;
@@ -473,8 +464,6 @@ body {
   #myChart {
     max-width: 374px;
     min-height: 158px;
-    
-    width: 100%;
     margin: 0;
     margin-bottom: 20px;
   }
